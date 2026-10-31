@@ -1,0 +1,38 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+PS C:\Users\Loíde> cd C:\Users\Loíde\Desktop\SO\Atv1
+PS C:\Users\Loíde\Desktop\SO\Atv1>  docker run -it --name cont2 fedora-menor:latest /bin/bash
+[root@1ead9dac6d2f app]# whoami
+root
+[root@1ead9dac6d2f app]# hostname
+bash: hostname: command not found
+[root@1ead9dac6d2f app]# ^C
+[root@1ead9dac6d2f app]# dnf install -y hostname
+Updating and loading repositories:
+ Fedora 44 openh264 (From Cisco) - x86_64                                                                           100% |   2.7 KiB/s |   5.3 KiB |  00m02s
+ Fedora 44 - x86_64 - Updates                                                                                       100% |   3.5 MiB/s |  12.3 MiB |  00m03s
+ Fedora 44 - x86_64                                                                                                 100% |   4.7 MiB/s |  36.4 MiB |  00m08s
+Repositories loaded.
+Package                                             Arch         Version                                              Repository                        Size
+Installing:
+ hostname                                           x86_64       0:3.25-4.fc44                                        fedora                        41.3 KiB
+
+Transaction Summary:
+ Installing:         1 package
+
+Total size of inbound packages is 28 KiB. Need to download 28 KiB.
+After this operation, 41 KiB extra will be used (install 41 KiB, remove 0 B).
+[1/1] hostname-0:3.25-4.fc44.x86_64                                                                                 100% | 109.3 KiB/s |  27.7 KiB |  00m00s
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+[1/1] Total                                                                                                         100% | 108.9 KiB/s |  27.7 KiB |  00m00s
+Running transaction
+[1/3] Verify package files                                                                                          100% |   0.0   B/s |   1.0   B |  00m00s
+[2/3] Prepare transaction                                                                                           100% |  83.0   B/s |   1.0   B |  00m00s
+[3/3] Installing hostname-0:3.25-4.fc44.x86_64                                                                      100% | 229.1 KiB/s |  44.2 KiB |  00m00s
+Complete!
+[root@1ead9dac6d2f app]# hostname
+1ead9dac6d2f
+[root@1ead9dac6d2f app]# exit
+exit
+PS C:\Users\Loíde\Desktop\SO\Atv1>
