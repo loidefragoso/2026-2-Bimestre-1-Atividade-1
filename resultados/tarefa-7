@@ -1,0 +1,27 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+PS C:\Users\Loíde>  cd C:\Users\Loíde\Desktop\SO\Atv1
+PS C:\Users\Loíde\Desktop\SO\Atv1> notepad Dockerfile
+PS C:\Users\Loíde\Desktop\SO\Atv1> docker build -t fedora-menor:latest .
+[+] Building 65.2s (6/6) FINISHED                      docker:desktop-linux
+ => [internal] load build definition from dockerfile                   0.1s
+ => => transferring dockerfile: 142B                                   0.0s
+ => [internal] load metadata for docker.io/library/fedora:latest       0.1s
+ => [internal] load .dockerignore                                      0.0s
+ => => transferring context: 2B                                        0.0s
+ => CACHED [1/2] FROM docker.io/library/fedora:latest@sha256:43b29f65  0.1s
+ => => resolve docker.io/library/fedora:latest@sha256:43b29f65a41eb9c  0.1s
+ => [2/2] RUN dnf update -y && dnf install -y fish python3 gcc        51.3s
+ => exporting to image                                                13.5s
+ => => exporting layers                                               10.8s
+ => => exporting manifest sha256:eb5468f73534e9af9a45da211cd97fa01b5c  0.0s
+ => => exporting config sha256:b13b23638940a406a78f9d5618e123776d20dd  0.0s
+ => => exporting attestation manifest sha256:1c186fa66448518a48ea3da1  0.0s
+ => => exporting manifest list sha256:c570e161490389c2d4587e4c33874d9  0.0s
+ => => naming to docker.io/library/fedora-menor:latest                 0.0s
+ => => unpacking to docker.io/library/fedora-menor:latest              2.6s
+PS C:\Users\Loíde\Desktop\SO\Atv1> docker run -it --name cont-final fedora-menor:latest
+Welcome to fish, the friendly interactive shell
+Type help for instructions on how to use fish
+root@61f9e703b8e7 /#
